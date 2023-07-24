@@ -6,6 +6,10 @@ public class Lec02Main {
 
   }
 
+  public boolean startsWithA(String str) {
+    return str.startsWith("A");
+  }
+
   public boolean startsWithA1(String str) {
     if (str == null) {
       throw new IllegalArgumentException("null이 들어왔습니다");
