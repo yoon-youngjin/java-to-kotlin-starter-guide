@@ -25,4 +25,9 @@ public final class JavaPenguin extends JavaAnimal implements JavaSwimable, JavaF
     JavaFlyable.super.act();
   }
 
+  @Override
+  public void fly() {
+
+  }
+
 }

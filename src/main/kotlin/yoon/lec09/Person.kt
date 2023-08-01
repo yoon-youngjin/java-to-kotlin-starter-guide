@@ -23,12 +23,12 @@ class Person(
         println("초기화 블록")
     }
 
-    fun isAdult(): Boolean {
-        return this.age >= 20
-    }
+//    fun isAdult(): Boolean {
+//        return this.age >= 20
+//    }
 
-    val isAdult: Boolean
-        get() = this.age >= 20
+//    val isAdult: Boolean
+//        get() = this.age >= 20
 
     constructor(name: String) : this(name, 1) {
         println("부생성자 1")
