@@ -20,7 +20,7 @@ private fun moveSomething(movable: Movable) {
     movable.fly()
 }
 
-class Person private constructor(
+class Person constructor(
     private var name: String,
     private var age: Int,
 ) {
