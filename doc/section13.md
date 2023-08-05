@@ -98,3 +98,5 @@ class House(
 - 바깥 클래스를 참조하기 위해서는 `this@바깔클래스명`을 사용한다.
 
 코틀린에서는 기본적으로 바깥 클래스를 참조하지 않는다. 굳이 바깥 클래스를 참조하고 시다면 `inner` 키워드를 추가한다.
+
+![image](https://github.com/yoon-youngjin/java-to-kotlin-starter-guide/assets/83503188/48850cc6-e620-419d-82d1-d90c0bb6e62e)
