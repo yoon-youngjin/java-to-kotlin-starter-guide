@@ -263,6 +263,17 @@ filterFruits(fruits) { fruit -> fruit.name == "사과" }
 filterFruits(fruits) { it.name == "사과" }
 ```
 
+**코틀린에서 함수가 1급 시민이다. (자바에서는 2급 시민)**
+
+람다를 여러 줄 작성할 수 있고, 마지막 줄의 결과가 람다의 반환값이다.
+
+```kotlin
+filterFruits(fruits) { fruit ->
+    println("사과!!")
+    fruit.name == "사과"
+}
+```
+
 ### 3. Closure
 
 ### 4. 다시 try with resources

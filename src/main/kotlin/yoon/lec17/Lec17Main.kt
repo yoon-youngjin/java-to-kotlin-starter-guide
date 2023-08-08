@@ -33,6 +33,11 @@ fun main() {
     filterFruits(fruits) { fruit -> fruit.name == "사과" }
     filterFruits(fruits) { it.name == "사과" }
 
+    filterFruits(fruits) { fruit ->
+        println("사과!!")
+        fruit.name == "사과"
+    }
+
 
 }
 
