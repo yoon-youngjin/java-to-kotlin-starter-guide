@@ -38,6 +38,10 @@ fun main() {
         fruit.name == "사과"
     }
 
+    var targetFruitName = "바나나"
+    targetFruitName = "수박"
+    filterFruits(fruits) { it.name == targetFruitName }
+
 
 }
 

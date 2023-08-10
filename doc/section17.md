@@ -276,4 +276,38 @@ filterFruits(fruits) { fruit ->
 
 ### 3. Closure
 
+```java
+String targetFruitName = "바나나";
+targetFruitName = "수박";
+filterFruits(fruits, (fruit) -> targetFruitName.equals(fruit.getName()));
+```
+- 자바에서는 위와 같은 람다식은 오류가 발생한다. 
+  - `Variable used in lamdba expression should be final or effectively final` 
+  - 자바에서는 람다를 쓸 때 사용할 수 있는 변수에 제약이 있다.
+    - 람다 밖에 존재하는 변수는 `final`인 변수 혹은 `effectively final` 변수만 가능하다.
+
+위 코드를 코틀린으로 변경하면
+
+```kotlin
+var targetFruitName = "바나나"
+targetFruitName = "수박"
+filterFruits(fruits) { it.name == targetFruitName }
+```
+
+**오류가 발생하지 않는다.** 
+
+코틀린에서는 람다가 시작하는 지점에 참조하고 있는 변수들을 **모두 포획**하여 그 정보를 가지고 있다.
+즉, `it.name == targetFruitName` 이라는 함수가 불려지는 시점에 존재하는 `targetFruitName`을 포획해서 정보를 가지고 있다.
+이렇게 해야만, 람다를 진정한 일급 시민으로 간주할 수 있고 이러한 데이터 구조를 **Closure**라고 부른다.
+
+
 ### 4. 다시 try with resources
+
+자바의 `try-with-resources` 대신에 코틀린에서는 `use`를 사용한다.
+
+`public inline fun <T : Closable?, R> T.use(block: (T) -> R): R {...}`
+- `Closeable` 구현체(`<T : Closebale?`)에 대한 확장함수(`T.use`)
+- inline 함수
+- 전달받는 파라미터가 `block`이라는 이름을 가진 함수다.
+  - `T`타입을 받아서 `R`타입을 반환하는 함수
+
