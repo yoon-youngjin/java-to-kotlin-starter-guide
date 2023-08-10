@@ -237,3 +237,5 @@ val samePriceFruits = fruitsInList.flatMap { list -> list.samePriceFilter }
 ```kotlin
 fruitsInList.flatten()
 ```
+
+![image](https://github.com/yoon-youngjin/java-to-kotlin-starter-guide/assets/83503188/9776fb2c-aff6-46ca-a2c5-3461e2907ac6)
