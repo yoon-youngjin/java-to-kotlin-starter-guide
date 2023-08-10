@@ -250,6 +250,8 @@ filterFruits(fruits, fun(fruit: Fruit): Boolean {
 이러한 경우에는 소괄호 밖으로 중괄호를 뺄 수 있다.
 또한, 현재 필터의 파라미터 타입이 `Fruit`을 받아 `Boolean`을 반환하는 것으로 함수에 들어가야 할 파라미터 타입을 추론할 수 있다. 따라서 타입 생략 가능
 마지막으로 앞에 이름(`fruit`)을 명시하고 화살표를 쓰는 것도 방법이지만 코틀린에서는 익명 함수를 만들 때 파라미터가 한 개인 경우에는 `it`을 사용하면 `it`이 곧 들어오는 `Fruit`이 된다.
+
+
 ```kotlin
 filterFruits(fruits, { fruit: Fruit -> fruit.name == "사과" })
 
@@ -266,6 +268,8 @@ filterFruits(fruits) { it.name == "사과" }
 **코틀린에서 함수가 1급 시민이다. (자바에서는 2급 시민)**
 
 람다를 여러 줄 작성할 수 있고, 마지막 줄의 결과가 람다의 반환값이다.
+
+`it`을 사용하는 것보다 변경 2와 같이 `fruit`을 직접 명시하는게 좋을 수 있다. 왜냐하면 함수를 부르는 쪽 코드만 봐서는 `it`데이터가 어떤 데이터인지 잘 모를 수 있기 때문이다.
 
 ```kotlin
 filterFruits(fruits) { fruit ->
@@ -300,6 +304,7 @@ filterFruits(fruits) { it.name == targetFruitName }
 즉, `it.name == targetFruitName` 이라는 함수가 불려지는 시점에 존재하는 `targetFruitName`을 포획해서 정보를 가지고 있다.
 이렇게 해야만, 람다를 진정한 일급 시민으로 간주할 수 있고 이러한 데이터 구조를 **Closure**라고 부른다.
 
+따라서, 코틀린에서는 Closure를 사용하여 non-final 변수(변경되는 변수)도 람다에서 사용할 수 있다.
 
 ### 4. 다시 try with resources
 
