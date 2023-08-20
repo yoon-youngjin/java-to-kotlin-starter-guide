@@ -150,7 +150,7 @@ public long calculate(Long number) {
 자바에서 위와 같은 early return 코드를 코틀린에서는 if문을 사용하지 않고 Elvis 연산자를 활용할 수 있다.
 
 ```kotlin
-fun calculate(number: Long?) {
+fun calculate(number: Long?): Long {
   number ?: return 0
 }
 ```
