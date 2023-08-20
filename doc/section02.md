@@ -205,6 +205,7 @@ javax.annotation 패키지, android.support.annotation 패키지, org.jetbrains.
 ### 플랫폼 타입
 
 코틀린이 null 관련 정보를 알 수 없는 타입으로 Runtime시 Exception이 발생할 수 있다.
+자바와 상호운용시 자바 API에 `@Nulaable` 또는 `@NonNull`이 붙지 않은 (원시타입이 아닌) 타입이 플랫폼 타입이 된다.
 
 ```java
 public class Person {
