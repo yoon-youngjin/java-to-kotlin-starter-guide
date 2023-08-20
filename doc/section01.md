@@ -60,10 +60,14 @@ final List<Integer> numbers = Arrays.asList(1, 2);
 // numbers = Arrays.asList(3, 4);
 numbers.add(4);
 ```
-- 자바에서 불변 컬렉션을 새로운 컬렉션을 바꾸는 것은 불가능하지만 해당 컬렉션안에 새로운 element를 추가하는 것은 가능한데, 코틀린도 마찬가지다.
+
+> 정확히는 ArrayList일 때 원소 추가가 가능하다. Arrays.asList에 원소를 추가하면 UnsupportedOperationException이 발생한다.
+
+자바에서 불변 컬렉션을 새로운 컬렉션을 바꾸는 것은 불가능하지만 해당 컬렉션안에 새로운 element를 추가하는 것은 가능한데, 코틀린도 마찬가지다.
 
 ```kotlin
-val numbers: List<Int> = listOf(1, 2)
+val numbers: MutableList<Int> = mutableListOf(1, 2)
+numbers.add(3)
 ```
 
 ### 간단한 Tip
