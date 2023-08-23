@@ -1,5 +1,5 @@
 ## 20강. 코틀린의 scope function
-
+ 
 ### 목차
 
 1. [scope function이란 무엇인가?](#1-scope-function이란-무엇인가)
