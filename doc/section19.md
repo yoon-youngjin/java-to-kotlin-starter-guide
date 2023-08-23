@@ -1,5 +1,5 @@
 ## 19강. 코틀린의 이모저모
-
+ 
 ### 목차
 
 1. [Type Alias 와 as import](#1-type-alias-와-as-import)
