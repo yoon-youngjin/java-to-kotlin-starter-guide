@@ -34,7 +34,7 @@ fun printPerson(person: Person?) {
 - let : scope function의 한 종류, 확장함수
   - 확장함수는 내가 넣고 싶은 변수를 파라미터로 넣는 게 아니라 변수.함수
 
-<img width="544" alt="image" src="https://github.com/yoon-youngjin/library-app/assets/83503188/4fe202b5-4f60-419d-a08b-a2530cd77a43">
+<img width="611" alt="image" src="https://github.com/yoon-youngjin/java-to-kotlin-starter-guide/assets/83503188/23d80171-b0f6-4fc4-85cb-c47b94adbb2f">
 
 - let : block 이라는 함수를 파라미터로 받는데, block은 T를 파라미터로 하고 R을 반환하는 함수, 반환타입은 block을 실행시켜 나온 R
     - 따라서 let은 함수를 인자로 받아서 함수를 실행시킨다.
