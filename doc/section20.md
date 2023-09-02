@@ -39,6 +39,7 @@ fun printPerson(person: Person?) {
 - let : block 이라는 함수를 파라미터로 받는데, block은 T를 파라미터로 하고 R을 반환하는 함수, 반환타입은 block을 실행시켜 나온 R
     - 따라서 let은 함수를 인자로 받아서 함수를 실행시킨다.
     - 람다({})를 사용하고 있으며, 람다 안에서 it을 통해서 person에 접근
+- 현재 코드를 이해해보면 Person 클래스의 확장함수 let이 된다. 이때 T는 Person
 
 **scope function은 람다를 사용해 일시적인 영역을 만들고 코드를 더 간결하게 만들거나, method chaning을 활용하는 함수이다.**
 
